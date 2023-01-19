@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BankingApp">
         <activity
+            android:name=".user_data"
+            android:exported="false" />
+        <activity
             android:name=".history_list"
             android:exported="false" />
         <activity
