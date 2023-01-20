@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash_screen"
+    android:background="#0b0633">
+
+  <ImageView
+      android:id="@+id/bankLogo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/logo_banking_logo"
+      android:layout_marginTop="150dp"
+      />
+         <ImageView android:id="@+id/riyaLogo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/my_logo"
+        android:layout_marginTop="680dp"
+        android:layout_centerHorizontal="true"
+        />
+
+  <TextView
+      android:id="@+id/text1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Created By"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:textSize="10pt"
+      android:fontFamily="cursive"
+      android:layout_marginTop="689dp"
+      android:layout_marginLeft="70dp"
+      />
+
+
+</RelativeLayout>

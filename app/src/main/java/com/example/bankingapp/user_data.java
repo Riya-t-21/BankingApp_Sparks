@@ -12,8 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class user_data extends AppCompatActivity {
     ProgressDialog progressDialog;
@@ -108,7 +111,7 @@ public class user_data extends AppCompatActivity {
                 }else if(Double.parseDouble(mAmount.getText().toString()) > newbalance){
                     mAmount.setError("Your account don't have enough balance");
                 }else{
-                    Intent intent = new Intent(user_data.this, sendtouser.class);
+                    Intent intent = new Intent(user_data.this, sendTouser.class);
                     intent.putExtra("phonenumber", phoneNumber.getText().toString());
                     intent.putExtra("name", name.getText().toString());
                     intent.putExtra("currentamount", newbalance.toString());
@@ -118,6 +121,32 @@ public class user_data extends AppCompatActivity {
                 }
             }
         });
+    }
+
+
+    private void transactionCancel() {
+        AlertDialog.Builder builder_exitbutton = new AlertDialog.Builder(user_data.this);
+        builder_exitbutton.setTitle("Do you want to cancel the transaction?").setCancelable(false)
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        Calendar calendar = Calendar.getInstance();
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM-yyyy, hh:mm a");
+                        String date = simpleDateFormat.format(calendar.getTime());
+
+                        new DatabaseHelper(user_data.this).insertTransferData(date, name.getText().toString(), "Not selected", "0", "Failed");
+                        Toast.makeText(user_data.this, "Transaction Cancelled!", Toast.LENGTH_LONG).show();
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        enterAmount();
+                    }
+                });
+        AlertDialog alertexit = builder_exitbutton.create();
+        alertexit.show();
     }
 
 
