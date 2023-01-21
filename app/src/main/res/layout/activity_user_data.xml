@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0b0633"
+    tools:context=".user_data">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/usercircle"/>
+
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name :"
+        android:textColor="#ff4949"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:id="@+id/txtMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No. :"
+        android:textColor="#ff4949"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_below="@+id/txtName"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="12dp"
+
+        />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Id :"
+        android:textColor="#ff4949"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/txtMobile"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/txtAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account No. :"
+        android:textColor="#ff4949"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/txtIfsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IFSC Code :"
+        android:textColor="#ff4949"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/txtAccount"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/txtCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Balance :"
+        android:textColor="#ff4949"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/txtIfsc"
+        android:layout_marginTop="90dp"
+        />
+
+
+    <TextView
+        android:id="@+id/showName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f4f4"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:id="@+id/showMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f4f4"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/showName"
+        />
+
+    <TextView
+        android:id="@+id/showEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f4f4"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="124dp"
+        android:layout_below="@+id/showMobile"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/showAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f4f4"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="166dp"
+        android:layout_below="@id/showEmail"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/showIFsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f4f4"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="147dp"
+        android:layout_below="@+id/showAccount"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/curr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f4f4"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:text="Rs. /-"
+        android:layout_marginLeft="200dp"
+        android:layout_below="@+id/showIFsc"
+        android:layout_marginTop="90dp"
+        />
+    <TextView
+        android:id="@+id/showCurrbb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f4f4"
+        android:textStyle="bold"
+        android:textSize="9pt"
+        android:layout_marginLeft="255dp"
+        android:layout_below="@+id/showIFsc"
+        android:layout_marginTop="90dp"
+        />
+      <Button
+          android:id="@+id/btnSendButton"
+          android:layout_width="300dp"
+          android:layout_height="75dp"
+          android:text="Send Money"
+          android:textSize="8pt"
+          android:backgroundTint="#0F80CA"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="500dp"
+
+          />
+</RelativeLayout>
